@@ -19,9 +19,13 @@ class Solution {
   and push to the queue. 
   
   Only push to the queue if you find smaller path. If you push all neighbouring nodes with their current 
-  distance to reach that node (instead of pushing only if you find smaller path) -> this will only increase time
-  complexity (and all the iterations for that node will never update the shortest path, as the path to reach 
-  the current node was not the shortest path -> hence no need to push)
+  distance to reach that node (instead of pushing only if you find smaller path) -> this will cause infinte looping.
+  e.g. 
+    0 -> 1,2,3
+    1 -> 0,4,5
+    If we push all neighbour node :
+    Since 1 is neighbour of 0, it will be pushed to the queue. And since we are not keeping track of visited nodes,
+    when it will run for 1 -> 0 will be pushed to queue, irrespective of the path length. This will cause infinite loop.
  
   
   Note: For unweighted graphs or weighted graphs with wt=1, apply normal BFS.
@@ -31,6 +35,7 @@ class Solution {
         for(auto it: adj[node]){
             if(dis[it]==INT_MAX){
                 dis[it] = dis[node] + 1;
+                q.push(it);
             }
         }
   */
