@@ -2,7 +2,7 @@
 #include<bits/stdc++.h>
 //Implementing Dijktra Algorithm using Priority queue GFG
 
-//NOTE : Dijktra Algorithm doesn't work for negative weights.
+//NOTE : Dijktra Algorithm doesn't work for negative weights and negative weight cycles.
 
 /*
 Given a weighted, undirected and connected graph of V vertices and an adjacency list adj where adj[i] 
