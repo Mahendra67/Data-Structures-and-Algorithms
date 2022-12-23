@@ -3,6 +3,8 @@
 //Reverse an array or vector using recursion
 using namespace std;
 
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
 //Using 2 pointers
 void reverse1(vector<int>& v1,int l, int r){
     if(l>=r){
@@ -12,6 +14,8 @@ void reverse1(vector<int>& v1,int l, int r){
     reverse1(v1,l+1,r-1);
 }
 
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
 //Using 1 pointer 
 void reverse2(vector<int>& v1,int i){
     if(i >= v1.size()/2){
@@ -20,6 +24,8 @@ void reverse2(vector<int>& v1,int i){
     swap(v1[i],v1[v1.size()-1-i]);
     reverse2(v1,i+1);
 }
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
 
 void print_array(vector<int> v){
     for(auto it:v){

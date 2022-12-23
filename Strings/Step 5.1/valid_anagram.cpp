@@ -10,6 +10,8 @@ typically using all the original letters exactly once.
 
 using namespace std;
 
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
 bool isAnagram1(string s, string t) {
     sort(s.begin(),s.end());
     sort(t.begin(),t.end());
@@ -19,6 +21,8 @@ bool isAnagram1(string s, string t) {
     }
     return false;
 }
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
 
 int main(){
     string s = "hello";

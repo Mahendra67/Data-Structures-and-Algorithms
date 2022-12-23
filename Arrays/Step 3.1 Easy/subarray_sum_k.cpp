@@ -7,6 +7,8 @@
 //https://www.youtube.com/watch?v=20v8zSo2v18
 using namespace std;
 
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
 int subarraySum(vector<int>& nums, int k) {
     int count = 0;
     //Using prefix sum method
@@ -42,6 +44,8 @@ int subarraySum(vector<int>& nums, int k) {
     return count;
 }
 
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
 //Approach O(n)
 int subarraySum2(vector<int>& nums, int k) {
     //Using hashmaps
@@ -75,6 +79,8 @@ int subarraySum2(vector<int>& nums, int k) {
     }
     return count;
 }
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
 
 int main(){
     vector<int> nums = {3,4,7,2,-3,1,4,2};

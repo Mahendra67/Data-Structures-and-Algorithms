@@ -8,6 +8,8 @@ Only check the condition if the subsequence has been formed. (start_idx >= size)
 */
 using namespace std;
 
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
 bool subsequence(int start_idx,vector<int>& temp,int sum,int k,int size,vector<int> arr){
     //Base condition
     if(start_idx >= size){
@@ -48,6 +50,8 @@ bool subsequence(int start_idx,vector<int>& temp,int sum,int k,int size,vector<i
 
     return false;
 }
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
 
 
 int main(){

@@ -2,6 +2,8 @@
 //Check if the given string is palindrome or not
 using namespace std;
 
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
 bool palindrome1(string s){
     for(int i=0; i<(s.length()/2); i++){
         if(s[i]!=s[s.length()-1-i]){
@@ -10,6 +12,8 @@ bool palindrome1(string s){
     }
     return true;
 }
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
 
 bool palindrome2(string s,int start, int end){
     //Base call
@@ -23,6 +27,8 @@ bool palindrome2(string s,int start, int end){
     }
     return pal;
 }
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
 
 int main(){
     string s = "HelloolleH";

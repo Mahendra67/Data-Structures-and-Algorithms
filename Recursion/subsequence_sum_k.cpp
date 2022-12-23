@@ -7,6 +7,8 @@ Only check the condition if the subsequence has been formed. (start_idx >= size)
 */
 using namespace std;
 
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
 void subsequence(int start_idx,vector<int>& temp,int sum,int k,int size,vector<int> arr){
     //Base condition
     if(start_idx >= size){
@@ -38,6 +40,8 @@ void subsequence(int start_idx,vector<int>& temp,int sum,int k,int size,vector<i
     //Since, we are not taking the element, the sum will remain same
     subsequence(start_idx+1, temp, sum, k, size, arr);
 }
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
 
 
 int main(){

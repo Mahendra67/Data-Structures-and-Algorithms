@@ -1,6 +1,6 @@
 #include<iostream>
 #include<bits/stdc++.h>
-//Find the missing number in an array
+//Find the missing number in an array of numbers containing 1 to n (except 1 number)
 using namespace std;
 
 void display(int arr[],int size){
@@ -16,6 +16,8 @@ int main(){
     int arr[] = {4,6,5,7,9,8,2,1,0};
     int n = sizeof(arr)/sizeof(int);
 
+    /*----------------------------------------------------------------------------------------------------------------------------------*/
+
     //Approach 1
     //Sort the current array
     //Check if a[i] = a[i+1]+1 doesnt exist -> return a[i]+1
@@ -26,8 +28,8 @@ int main(){
             break;
         }
     }
-    
 
+    /*----------------------------------------------------------------------------------------------------------------------------------*/
 
     //Approach 2
     //Using XOR 

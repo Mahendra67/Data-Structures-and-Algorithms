@@ -16,6 +16,8 @@ Hence, 2^n can be written as (1<<n)
 */
 using namespace std;
 
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
 vector<string> AllPossibleStrings(string s) {
 	int n = s.length();
 	vector<string>ans;
@@ -34,10 +36,11 @@ vector<string> AllPossibleStrings(string s) {
 	sort(ans.begin(), ans.end());
 	return ans;
 }
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
 int main()
 {
-
-
 	string s="abc";
 	vector<string>ans = AllPossibleStrings(s);
 	//printint all the subsequence.

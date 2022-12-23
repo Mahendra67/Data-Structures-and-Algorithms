@@ -11,6 +11,8 @@ void display(int arr[],int size){
     cout<<endl;
 }
 
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
 void approach1(int arr[],int size){
     int temp[size];
 
@@ -35,6 +37,8 @@ void approach1(int arr[],int size){
     //Display the array
     display(temp,size);
 }
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
 
 void approach2(int arr[],int n){
     //Finding first occurence of zero

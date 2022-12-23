@@ -17,6 +17,8 @@ void print_array(vector<int> v1){
     cout<<endl;
 }
 
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
 void subsequence(int i,vector<int>& temp,int size,vector<int> v){
     //Base case
     if(i == size){
@@ -35,6 +37,8 @@ void subsequence(int i,vector<int>& temp,int size,vector<int> v){
     subsequence(i+1, temp, size, v);
 
 }
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
 
 int main(){
     //Original vector

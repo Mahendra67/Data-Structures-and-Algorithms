@@ -7,6 +7,8 @@ using namespace std;
 int main(){
     int arr[] = {1,2,4,3,1,4,1,3,4,6,4,1,0,9,0,0,0};
 
+    /*----------------------------------------------------------------------------------------------------------------------------------*/
+
     //Approach 1 
     //Using unordered map
     //Count the elements in an unordered map, and display the highest element (if occurence is same, display the smallest element)
@@ -50,6 +52,8 @@ int main(){
     }
 
     cout<<"Minimum frequncy element is : "<<least_number<<" : "<<least_occurence<<endl;
+
+    /*----------------------------------------------------------------------------------------------------------------------------------*/
 
     return 0;
 }

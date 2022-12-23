@@ -14,6 +14,8 @@ struct TreeNode {
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
 //Approach 1 : Recursive O(n)
 class Solution {
 public:
@@ -48,6 +50,8 @@ public:
     }
 };
 
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
 // Approach 3 :Recursive
 //If the given tree is balanced, then the time complexity would be O(log n)
 //If the given tree is not balanced, then the worst case could be if it is built like a chain, hence O(n)
@@ -79,6 +83,8 @@ public:
         } 
     }
 };
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
 
 int main(){
     

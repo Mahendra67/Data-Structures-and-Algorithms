@@ -2,6 +2,8 @@
 //Given a number n, print the fibonacci numbers upto nth term
 using namespace std;
 
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
 int recursion(int num){
     if(num<=1){
         return num;
@@ -10,6 +12,8 @@ int recursion(int num){
     int second_last = recursion(num-2);
     return last+second_last;
 }
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
 
 int recursion2(int num, int first, int second){
     cout<<first<<"\t";
@@ -22,6 +26,8 @@ int recursion2(int num, int first, int second){
     //Zero signifies program completetion
     return 0;
 }
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
 
 int main(){
     int num = 6;

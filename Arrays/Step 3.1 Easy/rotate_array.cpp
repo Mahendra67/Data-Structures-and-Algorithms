@@ -7,6 +7,8 @@
 //You can use sizeof in main (for arrays)
 using namespace std;
 
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
 void approach1(int arr[],int size){
     int temp = arr[0];
 
@@ -21,12 +23,16 @@ void approach1(int arr[],int size){
     arr[size-1] = temp;
 }
 
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
 void approach2(int arr[],int temp[],int size){
     for(int i=0 ; i<size-1 ; i++){
         temp[i] = arr[i+1];
     }
     temp[size-1] = arr[0];
 }
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
 
 void display(int arr[],int size){
     //Can't use sizeof here

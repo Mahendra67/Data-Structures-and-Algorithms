@@ -7,6 +7,8 @@ You have to rotate the image in-place, which means you have to modify the input 
 */
 using namespace std;
 
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
 void rotate1(vector<vector<int>>& matrix) {
     //First find transpose of matrix
     int n = matrix.size();
@@ -21,6 +23,8 @@ void rotate1(vector<vector<int>>& matrix) {
             reverse(matrix[i].begin(),matrix[i].end());
     }
 }
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
 
 
 void display(vector<vector<int>>& matrix){

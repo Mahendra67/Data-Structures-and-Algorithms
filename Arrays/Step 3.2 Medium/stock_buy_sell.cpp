@@ -5,6 +5,8 @@
 //Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
 using namespace std;
 
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
 int maxProfit1(vector<int>& prices) {
     int max_pro = 0;
     for(int i =0; i<prices.size()-1;i++){
@@ -17,6 +19,8 @@ int maxProfit1(vector<int>& prices) {
     }
     return max_pro;
 }
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
 
 int maxProfit(vector<int>& prices) {
     int MaxProfitSoFar = 0;
@@ -36,6 +40,8 @@ int maxProfit(vector<int>& prices) {
     }
     return MaxProfitSoFar;
 }
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
 
 int main(){
     vector<int> nums = {7,1,4,6,5,3};

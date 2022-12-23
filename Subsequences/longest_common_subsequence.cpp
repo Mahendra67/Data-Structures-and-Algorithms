@@ -13,6 +13,8 @@ A common subsequence of two strings is a subsequence that is common to both stri
 */
 using namespace std;
 
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
 /*BRUTE FORCE APPROACH*/
 //Find all subsequences of both strings, store in vector, then return the max length of common subsequence word. 
 //If doesn't exists, return 0
@@ -64,6 +66,8 @@ public:
         return max_length;
     }
 };
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
 
 int main(){
     

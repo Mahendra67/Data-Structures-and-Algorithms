@@ -14,6 +14,7 @@ struct ListNode {
     ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
 
+/*----------------------------------------------------------------------------------------------------------------------------------*/
 
 ListNode* reverseList(ListNode* head) {
     if(head==NULL) return NULL;
@@ -39,6 +40,8 @@ ListNode* reverseList(ListNode* head) {
     return head;
 }
 
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
 //Iterative approach
 ListNode* reverseList(ListNode* head) {
     //Iterative and space complexity O(1)
@@ -53,6 +56,8 @@ ListNode* reverseList(ListNode* head) {
     
     return prev;
 }
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
 
 //Recursive approach
 ListNode* reverseList(ListNode* head) {
@@ -78,6 +83,8 @@ ListNode* reverseList(ListNode* head) {
     
     return head2;
 }
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
 
 int main(){
     

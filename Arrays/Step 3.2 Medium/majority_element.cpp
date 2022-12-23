@@ -7,6 +7,8 @@ The majority element is the element that appears more than ⌊n / 2⌋ times. Yo
 */
 using namespace std;
 
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
 int bruteforce(vector<int>& nums){
     int n = nums.size()/2;
     int count = 0;
@@ -24,6 +26,8 @@ int bruteforce(vector<int>& nums){
     //Assuming the array has atleast 1 element
     return nums[0];
 }
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
 
 int majorityElement1(vector<int>& nums) {
     int n = nums.size()/2;
@@ -43,6 +47,8 @@ int majorityElement1(vector<int>& nums) {
     }
     return nums[0];
 }
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
 
 int majorityElement2(vector<int>& nums) {
     int n = nums.size()/2;
@@ -68,6 +74,8 @@ int majorityElement2(vector<int>& nums) {
     return nums[0];
 }
 
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
 int majorityElement3(vector<int>& nums){
     //Using Moore's voting algorithm
     int count = 0;
@@ -87,6 +95,8 @@ int majorityElement3(vector<int>& nums){
     
     return majority;
 }
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
 
 int main(){
     vector<int> arr = {1,2,1};

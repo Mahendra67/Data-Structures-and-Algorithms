@@ -13,6 +13,7 @@ struct ListNode {
     ListNode(int x) : val(x), next(NULL) {}
 };
 
+/*----------------------------------------------------------------------------------------------------------------------------------*/
 
 ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
     //Using unordered_sets
@@ -38,6 +39,8 @@ ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
     //Not found
     return NULL;
 }
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
 
 int main(){
     

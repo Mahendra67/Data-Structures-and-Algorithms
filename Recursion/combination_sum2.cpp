@@ -7,6 +7,8 @@ Also, note that the solution must not contain duplicates subsequences.
 */
 using namespace std;
 
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
 //Approach1 : BRUTE FORCE
 //Since, the answer needed is in sorted order, first sort the given vector
 //Do the combination sum approach normally, but instead of storing vector of vector for subsequences you need to store 
@@ -52,6 +54,8 @@ public:
     }
 };
 
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
 //Approach 2: By not taking duplicates values while forming the subsequence  : STRIVER METHOD
 class Solution {
 public:
@@ -89,6 +93,8 @@ public:
         return ans;
     }
 };
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
 
 int main(){
     

@@ -5,6 +5,8 @@
 //Exactly one solution 
 using namespace std;
 
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
 vector<int> twoSum(vector<int>& nums, int target) {
     
     vector<int> indices;
@@ -22,6 +24,8 @@ vector<int> twoSum(vector<int>& nums, int target) {
     return indices;
 }
 
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
 vector<int> twoSum2(vector<int>& nums, int target) {
     //Using hash map
     unordered_map<int,int> mpp;
@@ -36,6 +40,8 @@ vector<int> twoSum2(vector<int>& nums, int target) {
     }
     return {-1,-1};
 }
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
 
 int main(){
     vector<int> nums = {2,7,11,15};

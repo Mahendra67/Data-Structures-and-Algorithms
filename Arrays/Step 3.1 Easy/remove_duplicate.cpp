@@ -4,6 +4,8 @@
 //Remove duplicates from sorted array
 using namespace std;
 
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
 //Approach 1
 int removeDuplicates(vector<int>& nums){
     //No. of duplicates
@@ -28,6 +30,8 @@ int removeDuplicates(vector<int>& nums){
     return size-m;
 }
 
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
 //Approach 2
 int removeDuplicates(vector<int>& nums) {
     int val = nums[0];
@@ -47,6 +51,8 @@ int removeDuplicates(vector<int>& nums) {
     return counter;
 }
 
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
 //Approach 3
 int removeDuplicates(vector<int>& nums) {
     int index = 0;
@@ -61,6 +67,8 @@ int removeDuplicates(vector<int>& nums) {
     //hence, we need to include the first element too.
     return index + 1;
 }
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
 
 int main(){
     

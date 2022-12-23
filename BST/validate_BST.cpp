@@ -14,6 +14,7 @@ struct TreeNode {
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
+/*----------------------------------------------------------------------------------------------------------------------------------*/
 
 //Approach 1: Using Vector and Inorder traversal
 class Solution {
@@ -50,6 +51,8 @@ public:
     }
 };
 
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
 //Approach 2: Checking if the root->val is in range
 class Solution {
 public:
@@ -77,6 +80,8 @@ public:
         return isValidBST(root,LONG_MIN,LONG_MAX);
     }
 };
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
 
 int main(){
     

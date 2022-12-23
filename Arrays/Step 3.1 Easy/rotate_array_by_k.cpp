@@ -55,6 +55,8 @@ int main(){
     int k =3;
     int size = sizeof(arr)/sizeof(int) ; 
 
+    /*----------------------------------------------------------------------------------------------------------------------------------*/
+
     //Approach1
     //Copy the last k elements to temp array
     //Shift the remaining elements right side by k times
@@ -64,6 +66,8 @@ int main(){
     //Display
     display(arr,size);
 
+    /*----------------------------------------------------------------------------------------------------------------------------------*/
+
     //Approach2
     //Using reversal algorithm
     //Reverse upto the kth element from the last
@@ -72,6 +76,8 @@ int main(){
     reverse(arr2,0,size-k-1);
     //Now reverse the whole array
     reverse(arr2,0,size-1);
+
+    /*----------------------------------------------------------------------------------------------------------------------------------*/
 
     //Display
     display(arr2,size);
