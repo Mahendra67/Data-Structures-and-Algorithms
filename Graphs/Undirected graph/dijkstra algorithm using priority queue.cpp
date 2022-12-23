@@ -3,6 +3,14 @@
 //Implementing Dijktra Algorithm using Priority queue GFG
 
 //NOTE : Dijktra Algorithm doesn't work for negative weights and negative weight cycles.
+/*Applying Dijktras Algoritm in negative weight will cause infinite loop, since everytime you traverse through
+the negative path, it will always decrease the path weight. And in PQ, the -ve path will always be considered, causing
+infinite loop.
+e.g.            -2
+        0    <------->      1
+0 can move to 1 with dist = -2. So, {-2,1} gets pushed into PQ. Now, for 1 --> 0 is adj node and the path takes -2 to reach. 
+Total path to reach 0 = -2 + (-2) = -4. Since, smaller than prev path, {-4,0} gets pushed into PQ. This will keep on reapeating.
+*/
 
 /*
 Given a weighted, undirected and connected graph of V vertices and an adjacency list adj where adj[i] 
