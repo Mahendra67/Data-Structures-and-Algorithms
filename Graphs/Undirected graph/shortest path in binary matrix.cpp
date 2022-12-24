@@ -13,6 +13,77 @@ The length of a clear path is the number of visited cells of this path.
 using namespace std;
 
 /*---------------------------------------------------------------------------------------------------------------------------------*/
+//Optimized Approach : Dijktras Algo with Queue
+
+class Solution {
+public:
+    //Using QUEUE
+    /*
+    Since it is unit weighted undirected graph, it can be solved using queue data structure.
+    (Since by travelling any path, it will increase by 1. No shorter edge weight, as every
+    path is equal).
+    
+    In this case, by using queue instead of priority queue, we eliminate logN for insertion.
+    (PQ takes logN to perform insertion)
+    */
+    int shortestPathBinaryMatrix(vector<vector<int>>& grid) {
+        //Edge case : If src node is 1
+        if(grid[0][0] == 1) return -1;
+        
+        int n = grid.size();
+        
+        pair<int,int> src = {0,0};
+        // pair<int,int> des = {n-1,n-1};
+        
+        //Dijktra
+        queue<pair<int,pair<int,int>>> q;
+        
+        //min dist vector of vector
+        vector<vector<int>> minCells(n,vector<int> (n,INT_MAX));
+        
+        //Pair : {dist,{row, col}}
+        q.push({1,src});
+        //Update minCells of src node to 1
+        minCells[0][0] = 1;
+        
+        while(!q.empty()){
+            auto it = q.front();
+            int dis = it.first;
+            int r = it.second.first;
+            int c = it.second.second;
+            q.pop();
+            
+            //For its neighbours
+            int possible_row[] = {-1, -1, -1, 0, 1, 1, 1, 0};
+            int possible_col[] = {-1, 0, 1, 1, 1, 0, -1, -1};
+            
+            for(int i=0; i<8; i++){
+                int fr = r + possible_row[i];
+                int fc = c + possible_col[i];
+                
+                //Check if it is valid index
+                if(fr>=0 && fr<n && fc>=0 && fc<n && grid[fr][fc]==0){
+                    //Since path weight between 2 nodes is 1
+                    if(dis + 1 < minCells[fr][fc]){
+                        minCells[fr][fc] = dis + 1;
+                        
+                        q.push({minCells[fr][fc], {fr,fc}});
+                    }
+                }
+            }
+        }
+        
+        //If minCells[n-1][n-1] is unreachable, return -1
+        if(minCells[n-1][n-1] == INT_MAX){
+            return -1;
+        }
+        
+        return minCells[n-1][n-1];
+    }
+};
+
+
+/*---------------------------------------------------------------------------------------------------------------------------------*/
 
 //Approach using Dijktra Algorithm
 /*Intuition: Since the problem has something to do with negihbouring nodes -> graph problem
