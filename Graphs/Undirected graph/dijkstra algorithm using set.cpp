@@ -20,6 +20,19 @@ vertex S and You to Find the shortest distance of all the vertex's from the sour
 to return a list of integers denoting shortest distance between each node and Source vertex S.
 */
 
+//TC : E log V 
+//V -> no. of vertices and E is the no. of edges
+
+//Why we use PQ or set instead of queue data structure?
+/*
+We could have used queue instead of priority queue : But if we use queue, we will have to deal with unnecessary paths.
+Since in queue, data can only be accessed from front and back only. So, if by chance in adjacency list, the longer distance is given
+before the shorter one, we have to process its adjacent nodes with the longer distance first (which would give overall longer distance)
+and then the shorter one will be processed.
+Hence, to avoid un-necessary iterations, we use min priority queue, which will one consider the minimum path that can reach a node -> and 
+further process adjNode by only considering the shortest distance to current node. 
+*/
+
 using namespace std;
 
 /*-----------------------------------------------------------------------------------------------------------------------------------*/
