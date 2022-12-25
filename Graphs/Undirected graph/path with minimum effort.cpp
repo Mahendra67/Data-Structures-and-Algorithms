@@ -68,7 +68,8 @@ public:
                 if(fr>=0 && fr<row && fc>=0 && fc<col){
                     //Since we need to keep track of the max effort in a path
                     //Hence, we check if travelling to adj mountains gives a bigger value.
-                    int newEffort = max(abs(heights[fr][fc] - heights[r][c]), diff);
+                    int diff_between_nodes = std::abs(heights[fr][fc] - heights[r][c]);
+                    int newEffort = max(diff_between_nodes, diff);
                     
                     if(newEffort < minEffort[fr][fc]){
                         minEffort[fr][fc] = newEffort;
