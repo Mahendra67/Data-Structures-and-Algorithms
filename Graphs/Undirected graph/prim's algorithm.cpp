@@ -38,17 +38,24 @@ class Solution
         
         int sum = 0;
         
+        //Runs for worst case: all edges(E)
+        //TC : E*logE + E*logE
         while(!pq.empty()){
             //get the minimum possible edge of the current visited nodes (from the priority queue)
+
+            //log E (Since priority queue)
             auto it = pq.top();
             int node = it.second;
             int dist = it.first;
             pq.pop();
             
-            
+
             if(!vis[node]){
                 //Add the current dist considered into the sum
                 sum += dist;
+
+                //This on total, runs for all the edges (E) and Pushing into PQ takes logE
+                //E*log E
                 for(auto it: adj[node]){
                     int adjNode = it[0];
                     int adjDist = it[1];
