@@ -67,6 +67,7 @@ public:
     }
 
 
+    //BOTH Union by size and Union by Rank are of same Time complexity
 
     //Union By Size
     //Size refers to the no. of nodes connected to ultimate parent (including the ultimate parent)
@@ -146,7 +147,25 @@ public:
 
 /*-------------------------------------------------------------------------------------------------------------------*/
 
-int main(){
-    
-    return 0;
+int main() {
+    DisjointSet ds(7);
+    //Dynamic graph as it is changing at each line
+    ds.UnionBySize(1, 2); 
+    ds.UnionBySize(2, 3); 
+    ds.UnionBySize(4, 5); 
+    ds.UnionBySize(6, 7); 
+    ds.UnionBySize(5, 6); 
+    // if 3 and 7 same or not 
+    if(ds.findUParent(3) == ds.findUParent(7)) {
+        cout << "Same\n"; 
+    }
+    else cout << "Not same\n"; 
+
+    ds.UnionBySize(3, 7); 
+
+    if(ds.findUParent(3) == ds.findUParent(7)) {
+        cout << "Same\n"; 
+    }
+    else cout << "Not same\n"; 
+	return 0;
 }
