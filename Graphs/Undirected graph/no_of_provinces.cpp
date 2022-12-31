@@ -15,6 +15,7 @@ Return the total number of provinces.
 */
 using namespace std;
 
+/*---------------------------------------------------------------------------------------------------------------------*/
 
 //DFS Approach
 class Solution {
@@ -57,6 +58,102 @@ public:
         return count;
     }
 };
+
+/*---------------------------------------------------------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------------*/
+//DSU APPROACH : Disjoint Set
+/*Approach :Use disjoint set data structure to attach the nodes that can be connected to other nodes in a group.
+
+Now, just count the no. of groups formed. (No. of ultimate parents)
+Different ultimate parent means different groups.
+*/
+
+class DisjointSet{
+    vector<int> parent, size;
+public:
+    DisjointSet(int n){
+        parent.resize(n);
+        size.resize(n, 1);
+        
+        for(int i=0; i<n; i++){
+            parent[i] = i;
+        }
+    }
+      
+    //find ultimate parent : With path compression
+    int findUltParent(int node){
+        if(parent[node] == node){
+            return node;
+        }
+        
+        //If not the parent of itself(not ult parent)
+        return parent[node] = findUltParent(parent[node]);
+    }
+    
+    //Union by Size
+    void UnionBySize(int u, int v){
+        //Find ult parent of both vertices
+        int ult_u = findUltParent(u);
+        int ult_v = findUltParent(v);
+        
+        //If they have same ult parent, that means they are already in same component
+        if(ult_u == ult_v){
+            return;
+        }
+        
+        if(size[ult_u] > size[ult_v]){
+            parent[ult_v] = ult_u;
+            size[ult_u] += size[ult_v];
+        }else{
+            parent[ult_u] = ult_v;
+            size[ult_v] += size[ult_u];
+        }
+        
+        return;
+    }
+};
+
+class Solution {
+public:
+    int findCircleNum(vector<vector<int>>& isConnected) {
+        int n = isConnected.size();
+        
+        DisjointSet ds(n);
+                
+        for(int i=0; i<n; i++){
+            for(int j=0; j<n; j++){
+                if(isConnected[i][j] == 1){
+                    int node_u = i;
+                    int node_v = j;
+                    
+                    ds.UnionBySize(node_u, node_v);
+                }
+            }
+        }
+        
+        int count = 0;
+        //Now, the groups are formed : Count no. of ultimate parents
+        for(int i=0; i<n; i++){
+            if(ds.findUltParent(i) == i){
+                count++;
+            }
+        }
+        /*
+        If the parent array was declared in public access modifier, then you could have done:
+        
+        for(int i=0; i<n+1; i++){
+            if(parent[i] == i){
+                count++;
+            }
+        }
+        */
+        
+        return count;
+    }
+};
+
+/*---------------------------------------------------------------------------------------------------------------------*/
 
 int main(){
     
