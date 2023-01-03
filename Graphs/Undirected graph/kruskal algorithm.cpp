@@ -1,6 +1,11 @@
 #include<iostream>
 #include<bits/stdc++.h>
 //Krushkal Algoritm
+/*
+Krushkal Algorithm:
+1. Sort the edges by their distances
+2. Use disjoint set to connect vertices if they are not in same component using Union by Rank or Size.
+*/
 using namespace std;
 
 /*----------------------------------------------------------------------------------------------------------*/
@@ -61,7 +66,7 @@ class Solution
     /*
     Krushkal Algorithm:
     1. Sort the edges by their distances
-    2. Use disjoint set to connect vertexes if they are not in same component using Union by Rank or Size.
+    2. Use disjoint set to connect vertices if they are not in same component using Union by Rank or Size.
     */
 	public:
 	//Function to find sum of weights of edges of the Minimum Spanning Tree.
