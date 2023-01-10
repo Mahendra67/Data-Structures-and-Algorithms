@@ -2,9 +2,15 @@
 #include<bits/stdc++.h>
 //Fibonacci number using dynamic programming
 
+//DP is just optimized recursion
+/*
+Memoization is top-down approach (stats with n -> goes to base case -> backtrackes)
+Tabulation is bottom-up approach (starts with base cases -> builds up to n using previous cases)
+*/
+
 //If subproblems are already solved, 
 /*
-In memoziation, we tend to store the values of subproblems in some map/table
+In memoization, we tend to store the values of subproblems in some map/table
 */
 using namespace std;
 
