@@ -34,11 +34,20 @@ public:
     
     int minCostClimbingStairs(vector<int>& cost) {
         int n = cost.size();
-        //Since the starting index can be 1 or 0, we need to find all the ways and return min
-        //If 0 is starting index
+        
+        /*
+        10 .......... 15 20
+        From the last 2 nodes of the stairs, there are 2 ways to reach top of stairs (out of array),
+        either i can go from 15 to outside of array(top) by jumping 2 steps, 
+        or i can go from 20 to outside of array(top) by jumping 1 step.
+
+        Hence, i need to return the min cost from cost to reach last node and cost to reach 2nd last node.
+        */
+        
+        //Last node
         int ls = minCost(n-1, cost);
         
-        //If 1 is starting index
+        //2nd last node
         int rs = minCost(n-2, cost);
         
         return min(ls, rs);
@@ -77,11 +86,19 @@ public:
         //For memoization
         vector<int> dp(n, -1);
         
-        //Since the starting index can be 1 or 0, we need to find all the ways and return min
-        //If 0 is starting index
+        /*
+        10 .......... 15 20
+        From the last 2 nodes of the stairs, there are 2 ways to reach top of stairs (out of array),
+        either i can go from 15 to outside of array(top) by jumping 2 steps, 
+        or i can go from 20 to outside of array(top) by jumping 1 step.
+
+        Hence, i need to return the min cost from cost to reach last node and cost to reach 2nd last node.
+        */
+
+        //Min cost to reach Last node
         int ls = minCost(n-1, cost, dp);
         
-        //If 1 is starting index
+        //Min cost to reach 2nd last node
         int rs = minCost(n-2, cost, dp);
         
         return min(ls, rs);
@@ -111,8 +128,15 @@ public:
             dp[i] = min(cost1, cost2);
         }
         
-        //Index can start from 0 or 1
-        //Return the min from those two
+        /*
+        10 .......... 15 20
+        From the last 2 nodes of the stairs, there are 2 ways to reach top of stairs (out of array),
+        either i can go from 15 to outside of array(top) by jumping 2 steps, 
+        or i can go from 20 to outside of array(top) by jumping 1 step.
+
+        Hence, i need to return the min cost from cost to reach last node and cost to reach 2nd last node.
+        */
+        
         return min(dp[n-1], dp[n-2]);
     }
 };
@@ -143,8 +167,15 @@ public:
             prev = curr;
         }
         
-        //Index can start from 0 or 1
-        //Return the min from those two
+        /*
+        10 .......... 15 20
+        From the last 2 nodes of the stairs, there are 2 ways to reach top of stairs (out of array),
+        either i can go from 15 to outside of array(top) by jumping 2 steps, 
+        or i can go from 20 to outside of array(top) by jumping 1 step.
+
+        Hence, i need to return the min cost from cost to reach last node and cost to reach 2nd last node.
+        */
+       
         return min(prev, prev2);
     }
 };
