@@ -44,6 +44,7 @@ void subsequence(int start_idx,vector<int>& temp,int sum,int k,int size,vector<i
 /*----------------------------------------------------------------------------------------------------------------------------------*/
 
 
+
 int main(){
     int start_idx = 0;
     vector<int> temp;

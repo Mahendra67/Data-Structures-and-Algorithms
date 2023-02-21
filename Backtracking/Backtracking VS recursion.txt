@@ -1,0 +1,10 @@
+Recursion:
+Recursive function solves a problem by calling itself and solving smaller problems first of original problem.
+It doesn't always require Backtracking.
+
+
+
+Backtracking:
+Backtracking uses recursion to solve a problem.
+If we know a choice will not give us the required answer in recursion, we will Backtrack from there.
+It will only proceed with choices that can give us the require answer.
