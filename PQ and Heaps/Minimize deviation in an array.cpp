@@ -21,8 +21,8 @@ using namespace std;
 /*-----------------------------------------------------------------------------------------------------------*/
 
 /*
-TC    :
-SC    :
+TC    : n*logn*logm -> n is length of nums and m is max(nums[i])
+SC    : O(n)
 */
 
 /*
