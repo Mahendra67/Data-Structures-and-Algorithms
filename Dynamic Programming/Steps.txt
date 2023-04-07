@@ -1,0 +1,24 @@
+For memoization:
+    1.  Just observe, how many variables are changing. If 1 variable, then 1D dp grid is required. 
+        If 2 variables, then 2D dp grid is required and so on.
+
+        After everything is completed in a function call, make sure to save that value in case, the same
+        subproblem appears again. Also, before performing tasks for a function frame, check if it has 
+        already been solved (check if already a value is stored in that dp for those variables).
+
+
+For Tabulation:
+    1.  Check what type of dp grid table is required. (1D/2D/3D)
+    2.  Figure out what does each grid cell means. This can be done easily by looking at the edge cases of
+        memoization.
+    3.  To fill a grid cell, check what rows/columns it is dependent on. (See recurrence relation)
+        e.g. If to fill grid[i][j] it is dependent on row just below it (grid[i+1][j]), then the bottom rows must 
+        be filled before the current row. So, the filling for rows would be from down to up. Also, if it is dependent
+        on left columns of the same row, then the left grid cells must be filled before the current grid cell.
+        Hence, for columns, the filling would be from left to right.
+        Hence, the base cases should fill the left most whole column and the lowest whole row (nth row).
+    4.  Now, observe the base cases from the memoization Approach and implement the same in current dp grid.
+    5.  Fill the rest of the dp grid using the same recurrence relation from memoization approach.
+        Make sure to not update those grid cells which have been previously filled by base cases.
+
+         
