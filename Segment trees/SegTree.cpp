@@ -99,7 +99,7 @@ public:
             //dont update the children nodes now -> lazy propagation
             //pass info that there are pending updates in this subtree 
             //store that info in lazy tree
-            if(segNodeRight != segNodeRight){
+            if(segNodeLeft != segNodeRight){
                 //ensure it has children nodes
                 lazy[segIdx*2+1] = lazy[segIdx];
                 lazy[segIdx*2+2] = lazy[segIdx]; 
