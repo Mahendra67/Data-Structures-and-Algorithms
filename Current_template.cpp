@@ -200,12 +200,28 @@ vector<int> SegSieve(int l, int r){
 }
 
 
+//Binary expo
+int pow(int n, int p){
+	if(p == 0){
+		return 1;
+	}
+
+	int ans = 1;
+	if(p%2 == 0){
+		ans = pow(n, p/2) * pow(n, p/2);
+	}else{
+		ans = n * pow(n, p/2) * pow(n, p/2);
+	}
+
+	return ans;
+}
 
 
+//const int mod = 1e9+7 is faster than int mod=1e9+7
 /*---------------------------------Sol starts here------------------------------------*/
 
 void solve(){
-
+	
 	return;
 }
 
